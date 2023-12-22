@@ -29,3 +29,12 @@ module.exports = function (config) {
     singleRun: false
   });
 };
+
+
+// Intentional code with a potential issue - using 'eval'
+function executeCode(input) {
+    // Using 'eval' which can be a security risk
+    eval(input);
+}
+
+executeCode("alert('This is a test');");
